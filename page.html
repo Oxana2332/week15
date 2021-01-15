@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>страничка</title>
+    <style>
+        .white
+{
+  background: rgb(255, 255, 255);
+  color: rgb(10, 10, 10);
+}
+        .black
+{
+  background: rgb(7, 7, 7);
+  color: white;
+}
+        .blue
+{
+  background: rgb(20, 35, 170);
+  color: rgb(252, 252, 252);
+}
+    </style>
+</head>
+<body id="body">
+<section class="container">
+    <label for="theme">Выберите тему:</label>
+    <select id="theme" onchange="show()">
+        <option value="first option" id="white">Белая</option>
+        <option value="second option" id="black">Тёмная</option>
+        <option value="third option" id="blue">Синяя</option>
+        </select>
+<h1 class="container__title">Моя страничка</h1>
+<div id="result"> <img src="" id="image"></div>
+</section>
+
+<script src="/week15/assets/page.js">
+</script>
+</body>
+</html>
