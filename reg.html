@@ -6,25 +6,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Регистрация</title>
     <link rel="stylesheet" href="reg.css">
-    <script src="/week15/assets/reg.js">
+    <script>
+    function check() {
+        let email = document.getElementById("email");
+        let password = document.getElementById("password");
+        let valide = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+        document.getElementById('error').innerHTML="";
+        let fname = document.getElementById("fname");
+        let lname = document.getElementById("lname");
+
+        if (lname.value.length<=0) {
+        document.getElementById('error').innerHTML+="Пожалуйста, введите фамилию <br>";
+    }
+
+        if (fname.value.length<=0) {
+        document.getElementById('error').innerHTML+="Пожалуйста, введите имя <br>";
+    }
+
+    if (email.value.match(valide)) {
+    } 
+    else {
+        document.getElementById('error').innerHTML+="Необходимо ввести емейл<br>";
+    }
+
+
+    if (password.value.length<=7) {
+        document.getElementById('error').innerHTML+="Необходимо ввести пароль, состоящий не менее, чем из 8 символов <br>";
+    }
+    }
     </script>
 </head>
 <body>
-<section class="container">
+<form class="container" name="contact_form">
 <h1 class="container__title">Регистрация</h1>
-<input type="text" class="container__in" placeholder="Имя">
-<input type="text" class="container__in" placeholder="Фамилия">
-<input type="text" class="container__in" placeholder="Придумайте пароль">
-<input type="text" class="container__in" placeholder="Адрес электронной почты">
+<input type="text" class="container__in" placeholder="Имя" id="fname">
+<input type="text" class="container__in" placeholder="Фамилия" id="lname">
+<input type="password" class="container__in" placeholder="Придумайте пароль" id="password">
+<input type="text" class="container__in" placeholder="Адрес электронной почты" id="email">
 <input type="text" class="container__in" placeholder="Номер мобильного телефона">
 
+<div id="error"></div>
+<button type="button" class="container__button" onclick="check()">Зарегистрироваться</button>
 
-<button class="container__button">Зарегистрироваться</button>
 <p class="container__sing">Нажимая кнопку "Зарегистрироваться":</p>
 <div class="container__checkbox">
     <input type="checkbox" name="space" value="1" checked/>
-<div class="container__checkbox_text">
-Я принимаю условия <a href="" class="container__checkbox_text-link">Пользовательского соглашения</a> и даю своё согласие Яндексу на обработку моей персональной информации на условиях, определенных <a href="" class="container__checkbox_text-link">Политикой конфиденциальности</a>.</div></div>
-</section>
+    <div class="container__checkbox_text">
+Я принимаю условия 
+<a href="" class="container__checkbox_text-link">Пользовательского соглашения</a>
+и даю своё согласие Яндексу на обработку моей персональной информации на условиях, определенных
+<a href="" class="container__checkbox_text-link">Политикой конфиденциальности</a>.
+</div>
+</div>
+
+
 </body>
 </html>

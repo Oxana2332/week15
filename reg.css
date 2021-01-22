@@ -29,7 +29,7 @@ body {
 .container__button {
     width: 100%;
     height: 50px;
-    background-color: #f1e207;
+    background-color: #fc0;
     font-size: medium;
     font-weight: bolder;
     margin-top: 30px;
@@ -53,4 +53,30 @@ body {
 .container__checkbox_text-link {
     text-decoration: none;
     color: rgb(67, 114, 167);
+}
+
+
+
+
+
+input:valid {
+    border-bottom: 1px solid yellow;
+}
+
+input:invalid {
+    border-bottom: 1px solid red;
+}
+
+input {
+    font-size: 1em;
+}
+
+input:focus,
+textarea:focus {
+    background-color:
+        white;
+}
+
+input submit {
+    font-size: 12pt;
 }
