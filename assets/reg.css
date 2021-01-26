@@ -56,9 +56,6 @@ body {
 }
 
 
-
-
-
 input:valid {
     border-bottom: 1px solid yellow;
 }
@@ -73,8 +70,7 @@ input {
 
 input:focus,
 textarea:focus {
-    background-color:
-        white;
+    background-color: white;
 }
 
 input submit {
